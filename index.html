@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetViva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="nav container">
+            <div class="logo">
+                <h1>PetViva</h1>
+            </div>
+
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#serviços">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <h2>Seu Pet merece tratamento Premium</h2>
+                    <p>Cuidado, conforto e excelência para quem faz parte da sua família</p>
+                    <a href="#contato" class="btn">Agende atendimento</a>
+                </div>
+                <div class="pet-card"><img src="./imagens/fatty-corgi-1QsQRkxnU6I-unsplash.png" alt="Cachorro feliz">
+                </div>
+
+            </div>
+        </section>
+        <section id="sobre" class="section container">
+            <h2>Sobre a PetViva</h2>
+            <p>A PetViva é uma clínica veterinária dedicada a proporcionar o melhor cuidado para seus animais de
+                estimação. Com uma equipe experiente e equipamentos modernos, garantimos tratamentos personalizados e de
+                alta qualidade com carinho que seu pet merece.</p><br>
+            <div class="stats">
+                <div><strong>2000+</strong><span> Pets felizes</span></div>
+                <div><strong>10+</strong><span> Anos de experiência</span></div>
+                <div><strong>98%</strong><span> Satisfação</span></div>
+            </div>
+        </section>
+        <section id="serviços" class="section alt">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="cards">
+                    <article class="card">Banho Spa</article>
+                    <article class="card">Tosa Profissional</article>
+                    <article class="card">Veterinário</article>
+                    <article class="card">Hotel Pet</article>
+                    <article class="card">Boutique</article>
+
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="section container">
+            <h2>Contato</h2>
+            <form id="formulario">
+                <!-- <label for="nome" class="visually-hidden">Nome Completo</label> -->
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <!-- <label for="email" class="visually-hidden">Email</label> -->
+                <input type="email" id="email" placeholder="Seu email" required>
+                <!-- <label for="mensagem" class="visually-hidden">Mensagem</label> -->
+                <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar mensagem</button>
+                <p id="msg"></p>
+            </form>
+        </section>
+    </main>
+    <section class="section alt container">
+        <h2>Depoimentos</h2>
+        <div class="cards">
+            <article class="card depo">⭐ Atendimento impecável!</article>
+            <article class="card depo">🐾 Meu pet ama a PetViva.</article>
+            <article class="card depo">💎 Estrutura premium e segura.</article>
+        </div>
+    </section>
+    <footer class="footer">© 2026 PetViva</footer>
+    <script src="script.js"></script>
+    <a href="#contato" class="whatsapp">✆</a>
+</body>
+
+</html>
