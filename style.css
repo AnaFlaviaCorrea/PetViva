@@ -3,13 +3,18 @@
     --dourado: #FFC947;
     --preto: #1A1A1A;
     --cinza: #f8f8f8;
-    --branco: #fff
+    --branco: #fff;
+    --header-height: 120px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,7 +30,8 @@ body {
 .cabecalho {
     background: #fff;
     position: sticky;
-    top: 0
+    top: 0;
+    height: var(--header-height);
 }
 
 .nav {
@@ -136,7 +142,9 @@ p {
 }
 
 .section {
-    padding: 4rem 0
+    padding: 4rem 0;
+    
+
 }
 
 .alt {
@@ -226,7 +234,7 @@ textarea.error {
     .nav ul {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 100px;
         right: 0;
         background: #fff;
         padding: 1rem;
@@ -236,6 +244,32 @@ textarea.error {
 
     .nav ul.open {
         display: flex
+    }
+
+    .nav a.active {
+        color: var(--dourado);
+        font-weight: 700;
+    }
+
+    .nav a {
+        position: relative;
+        transition: .3s;
+    }
+
+    .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        background: var(--dourado);
+        transition: .3s;
+    }
+
+    .nav a:hover::after,
+    .nav a.active::after {
+        width: 100%;
     }
 
     .menu-toggle {

@@ -62,3 +62,47 @@ form?.addEventListener('submit', e => {
         form.reset();
     }, 1500);
 });
+// --- MENU ATIVO (SCROLL SPY) ---
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+const header = document.querySelector('.cabecalho');
+
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            const headerHeight = header.offsetHeight;
+
+            const targetPosition = target.offsetTop - headerHeight - 20;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
