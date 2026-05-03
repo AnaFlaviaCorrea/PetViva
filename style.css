@@ -143,10 +143,17 @@ p {
 
 .section {
     padding: 4rem 0;
-    
+     
 
 }
-
+#sobre h2 {
+    margin-bottom: 1.2rem;
+}
+#sobre p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
 .alt {
     background: var(--cinza)
 }
@@ -179,7 +186,8 @@ p {
     display: grid;
     place-items: center;
     font-weight: 700;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .08)
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    text-align: center;
 }
 
 form {
@@ -191,7 +199,13 @@ input,
 textarea {
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 12px
+    border-radius: 12px;
+    
+}
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-family: Roboto, sans-serif;
 }
 
 .footer {
